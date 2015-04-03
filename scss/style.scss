@@ -1,0 +1,45 @@
+@import "normalize";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgb(200,200,200);
+	margin: 0px;
+	overflow: hidden;
+}
+
+#info {
+	position: absolute;
+	top: 0px; width: 100%;
+	color: #ffffff;
+	padding: 5px;
+	font-family:Monospace;
+	font-size:13px;
+	font-weight: bold;
+	text-align:center;
+
+	a {
+		color: #ffffff;
+		cursor: pointer;
+	}
+}
+
+#stats {
+	position: absolute;
+	top:0;
+	left: 0;
+
+	#fps {
+		background: transparent !important;
+
+		#fpsText {
+			color: #000 !important;
+		}
+
+		#fpsGraph {
+			display: none;
+		}
+	}
+}
