@@ -1,0 +1,78 @@
+<div>
+    <h1>Leveransvillkor</h1>
+
+    <p>Sugar plum halvah lemon drops pudding. Jelly-o croissant oat cake. Wafer halvah powder soufflé dessert. Sweet gummies chocolate. Topping carrot cake donut halvah ice cream oat cake pastry. Croissant croissant gingerbread dragée sweet roll icing ice cream bear claw lollipop. Carrot cake croissant soufflé biscuit cookie marzipan dragée. Sugar plum ice cream pudding liquorice jelly macaroon. Pastry cotton candy bonbon marshmallow macaroon candy canes jujubes. Cotton candy danish chocolate bar. Pudding jelly-o ice cream brownie. Sweet lemon drops chocolate cake. Jujubes chocolate marzipan danish. Cheesecake marshmallow cotton candy cotton candy chocolate cake.</p>
+
+    <p>Lollipop chocolate cake bonbon chocolate cake cookie bear claw tiramisu. Cupcake pudding sweet roll biscuit cotton candy sugar plum. Wafer biscuit macaroon carrot cake marzipan tootsie roll caramels. Candy canes chocolate cake marzipan. Dessert bonbon sweet roll donut.</p>
+
+    <p>Chocolate tart donut sesame snaps macaroon. Chupa chups jelly beans tiramisu danish halvah pudding oat cake sugar plum chocolate cake. Lemon drops halvah brownie cake jelly jelly beans. Marzipan chocolate cake brownie tart macaroon. Jujubes topping apple pie tiramisu sesame snaps carrot cake sugar plum icing carrot cake. Sweet sugar plum pudding croissant. Gummi bears soufflé jelly tootsie roll liquorice muffin chupa chups.</p>
+
+    <p>Bear claw tootsie roll dessert chocolate cake pie lemon drops sweet cotton candy pudding. Tootsie roll tart apple pie topping sweet roll jelly sesame snaps tiramisu jelly beans. Lollipop chocolate bar carrot cake liquorice. Bonbon jelly jelly fruitcake candy canes chocolate sweet roll marzipan. Croissant brownie candy canes marzipan oat cake muffin ice cream. Jelly marshmallow gingerbread candy candy muffin carrot cake chocolate. Jelly beans cupcake gummi bears lollipop apple pie pudding. Lemon drops chocolate cake jujubes candy canes halvah. Donut halvah cupcake jujubes. Tart candy canes liquorice cookie pastry halvah bonbon lollipop. Dragée sugar plum cheesecake cake donut jelly beans carrot cake. Toffee donut bear claw marzipan gummies apple pie soufflé. Oat cake gummies ice cream caramels gingerbread danish lollipop gingerbread. Cupcake muffin tiramisu sugar plum tart.</p>
+
+    <p>Wafer sesame snaps ice cream jelly halvah halvah soufflé chocolate bar. Lemon drops jujubes powder cake danish tart marzipan chocolate bar. Sesame snaps candy brownie cake soufflé jelly beans macaroon. Soufflé ice cream croissant sugar plum gingerbread cookie jelly beans. Cookie gingerbread candy dragée. Powder jelly jujubes candy canes cake brownie. Bonbon gummies gingerbread cake candy canes fruitcake jelly. Tiramisu gingerbread topping chocolate dragée croissant. Bonbon carrot cake tart ice cream. Donut caramels sweet roll tootsie roll chocolate cake bear claw carrot cake. Cupcake biscuit dessert oat cake apple pie. Pie cotton candy macaroon. Dessert candy canes jujubes pastry cotton candy.</p>
+
+    <p>Lemon drops ice cream bonbon pastry liquorice powder topping. Cake soufflé oat cake bear claw ice cream wafer chocolate carrot cake. Toffee bear claw oat cake pastry cotton candy sugar plum candy canes candy. Jelly candy candy canes pudding chocolate bar jelly-o oat cake danish. Ice cream apple pie caramels lemon drops jelly beans pie. Dessert jujubes cake. Caramels marzipan sweet roll cotton candy chocolate bar sugar plum tiramisu toffee. Bear claw dragée icing lollipop croissant chupa chups candy. Candy soufflé gummi bears wafer jelly beans. Jelly jelly beans carrot cake macaroon biscuit caramels lemon drops. Jelly-o cookie cheesecake brownie pastry donut ice cream liquorice. Donut chupa chups fruitcake.</p>
+</div>
+
+<style>
+    #rofl2 {
+        width: 200px;
+        margin: 100px auto 0 auto;
+    }
+</style>
+
+<div id="rofl2">
+
+<pre id="rofl">ROFL:ROFL:LOL:ROFL:ROFL
+           ^    
+  L   /---------
+ LOL===       []\
+  L    \         \
+        \_________]
+          I    I
+        ----------/
+    
+         ROFL COPTER !!!
+</pre>
+
+</div>
+
+<script>
+// men det funkar nuuu!
+var rofl = document.getElementById('rofl').innerHTML,
+    chMap = [
+        [0, 1, 2, 3, 4, 5, 6, 7, 8, 43, 78],
+        [14, 15, 16, 17, 18, 19, 20, 21, 22, 59, 61]
+    ],
+    chMapLength = chMap.length,
+    isBlank = true,
+    isBlankCounter = 1,
+    nonBlankTemplate = ['R', 'O', 'F', 'L', ':', 'R', 'O', 'F', 'L', 'L', 'L'];
+
+String.prototype.replaceAt = function (index, character) {
+    return this.substr(0, index) + character + this.substr(index + character.length);
+}
+
+setInterval(doRofl, 80);
+
+function doRofl() {
+    for(var i = 0; i < chMapLength; i++) {
+    	isBlank = !!(2 & isBlankCounter++);  
+        for(var j = 0; j < chMap[i].length; j++) {
+            var chReplace;
+            if(!isBlank) {
+                chReplace = ' ';                
+            } else {
+                chReplace = nonBlankTemplate[j];                
+            }  
+            rofl = rofl.replaceAt(chMap[i][j], chReplace);
+        }
+        
+		if (document.contains(document.getElementById('rofl'))) {
+			document.getElementById('rofl').innerHTML = rofl;
+		}
+	}
+}
+</script>
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/LatorN4P9aA" frameborder="0" allowfullscreen></iframe>

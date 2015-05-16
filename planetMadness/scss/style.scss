@@ -1,0 +1,82 @@
+@import "normalize";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgba(0, 0, 0, 1);
+	margin: 0px;
+	overflow: hidden;
+}
+
+#info {
+	position: absolute;
+	top: 0px; width: 100%;
+	color: #ffffff;
+	padding: 5px;
+	font-family: Monospace;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+
+	p {
+		position: absolute;
+		top: -8px;
+		right: 10px;
+	}
+
+	a {
+		text-decoration: none;
+		color: #ffffff;
+		cursor: pointer;
+
+		&:hover {
+			color: blue;
+		}
+	}
+}
+
+#about {
+ 	display: none;
+	position: absolute;
+	margin: auto;
+	padding-top: 60px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 50%;
+	height: 50%;
+	min-height: 250px;
+	pointer-events: none;
+	background-color: rgba(0, 0, 0, 0.6);
+	border: white 1px solid;
+	border-radius: 5px;
+	text-align: center;
+
+	p {
+		color: #ffffff;
+		font-family: Monospace;
+		font-size: 13px;
+		font-weight: bold;
+	}
+}
+
+#stats {
+	position: absolute;
+	top:0;
+	left: 0;
+
+	#fps {
+		background: transparent !important;
+
+		#fpsText {
+			color: #fff !important;
+		}
+
+		#fpsGraph {
+			display: none;
+		}
+	}
+}
